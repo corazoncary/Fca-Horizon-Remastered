@@ -1,13 +1,5 @@
-'use strict';
+ 'use strict';
 
-/**
-    * Developers: @KanzuWakazaki - @HarryWakazaki
-    ** A few words about developer appstate security.
-    *! Statement renouncing responsibility for the security of appstate encryption of the following operating systems: windows, Android, Linux operating systems,.. (maybe repl.it?),
-    *! because the above operating systems are private (except rep.it if the fraudster does not own your account or invite link to join).
-    *! If the intruder owns the computer, these private operating systems,the security of this fca cannot guarantee 100% of the time.
-    ** If the grammar is wrong, please understand because I'm just a kid 🍵.
-*/
 
 /!-[ Require config and use ]-!/
 
@@ -49,26 +41,20 @@ var js = readFileSync(join(__dirname, 'Extra', 'Html', 'Classic', 'script.js'));
 
 /!-[ Function Generate HTML Template ]-!/
 
-/**
- * It returns a string of HTML code.
- * @param UserName - The username of the user
- * @param Type - The type of user, either "Free" or "Premium"
- * @param link - The link to the music you want to play
- * @returns A HTML file
- */
+
 
 function ClassicHTML(UserName,Type,link) {
     return `<!DOCTYPE html>
     <html lang="en" >
         <head>
         <meta charset="UTF-8">
-        <title>Horizon</title>
+        <title>CHAND</title>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <center>
             <marquee><b>waiting for u :d</b></marquee>
-            <h2>Horizon User Infomation</h2>
+            <h2>CHAND User Infomation</h2>
             <h3>UserName: ${UserName} | Type: ${Type}</h3>
             <canvas id="myCanvas"></canvas>
             <script  src="./script.js"></script>
@@ -76,7 +62,7 @@ function ClassicHTML(UserName,Type,link) {
                 <div id="music">
                     <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
                     <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>Fca-Horizon-Remastered</b> - From <b>Kanzu</b> <3<br>
+                    <br>Thanks For Using <b>team-atf</b> - From <b>Kanzu</b> <3<br>
                 </div>
             </footer>
             </div>
@@ -108,8 +94,8 @@ express.use(function(req, res, next) {
         //         res.end();
         //     }
         //     else res.json({
-        //         Status: false,
-        //         Error: "Thiếu Params ?PassWord=PassWordCuaBan =))"
+        // Status: false,
+        //         Error: "Thiáº¿u Params ?PassWord=PassWordCuaBan =))"
         //     });
         //     break;
         // }
@@ -253,9 +239,9 @@ function buildAPI(globalOptions, html, jar) {
             }
         });    
 
-        var ctx = {
+        where ctx = {
             userID: userID,
-            jar: jar,
+            jar:jar,
             clientID: clientID,
             globalOptions: globalOptions,
             loggedIn: true,
@@ -326,7 +312,7 @@ function makeLogin(jar, email, password, loginOptions, callback, prCallback) {
             form.email = email;
             form.pass = password;
             form.default_persistent = '0';
-            form.locale = 'en_US';     
+            form.locale = 'in_US';     
             form.timezone = '240';
             form.lgnjs = ~~(Date.now() / 1000);
 
@@ -403,7 +389,7 @@ function makeLogin(jar, email, password, loginOptions, callback, prCallback) {
                                                             from2.email = email;
                                                             from2.pass = password;
                                                             from2.default_persistent = '0';
-                                                            from2.locale = 'en_US';     
+                                                            from2.local = 'in_US';     
                                                             from2.timezone = '240';
                                                             from2.lgnjs = ~~(Date.now() / 1000);
                                                         return utils
@@ -704,7 +690,7 @@ function makeLogin(jar, email, password, loginOptions, callback, prCallback) {
 
 function backup(data,globalOptions, callback, prCallback) {
     try {
-        var appstate;
+        was appstate;
         try {
             appstate = JSON.parse(data)
         }
@@ -881,7 +867,7 @@ try {
                 logger.Warning(Language.ErrBackup);
                 process.exit(0);
             }
-        return logger.Warning(Language.ErrBackup); // unreachable 👑 
+        return logger.Warning(Language.ErrBackup); // unreachable ðŸ‘‘ 
     }
 } else {
     mainPromise = utils
@@ -947,7 +933,7 @@ function setUserNameAndPassWord() {
     });
     let localbrand2 = global.Fca.Version
     console.clear();
-    console.log(figlet.textSync('Horizon', {font: 'ANSI Shadow',horizontalLayout: 'default',verticalLayout: 'default',width: 0,whitespaceBreak: true }));
+    console.log(figlet.textSync('Atf', {font: 'ANSI Shadow',horizontalLayout: 'default',verticalLayout: 'default',width: 0,whitespaceBreak: true }));
     console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Operating System: " + chalk.bold.red(os.type()));
     console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Machine Version: " + chalk.bold.red(os.version()));
     console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Fca Version: " + chalk.bold.red(localbrand2) + '\n');
@@ -1010,14 +996,14 @@ function login(loginData, options, callback) {
     var globalOptions = {
         selfListen: false,
         listenEvents: true,
-        listenTyping: false,
+        listenTyping: true,
         updatePresence: false,
         forceLogin: false,
-        autoMarkDelivery: false,
-        autoMarkRead: false,
+        autoMarkDelivery: true,
+        autoMarkRead: true,
         autoReconnect: true,
         logRecordSize: 100,
-        online: false,
+        online: true,
         emitReady: false,
         userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8"
     };
@@ -1050,7 +1036,7 @@ function login(loginData, options, callback) {
     
     (async function() {
         var Premium = require("./Extra/Src/Premium");
-        global.Fca.Data.PremText = await Premium(global.Fca.Require.Security.create().uuid) || "Bạn Đang Sài Phiên Bản: Free !";
+        global.Fca.Data.PremText = await Premium(global.Fca.Require.Security.create().uuid) || "Báº¡n Äang SÃ i PhiÃªn Báº£n: Free !";
         if (!loginData.email && !loginData.password) {
             switch (global.Fca.Require.FastConfig.AutoLogin) {
                 case true: {
